@@ -4,3 +4,4 @@
 
 ### Happy é o nome da aplicação desenvolvida e ela foi pensada para conectar a comunidade aos orfanatos da região.
 
+<img src="/landing-page-happy.png" alt="Happy" width="800" />
