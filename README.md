@@ -2,5 +2,5 @@
 
 ### Projeto construído do zero durante a Next Level Week edição #3.
 
-### Happy, nome da aplicação desenvolvida, foi pensada para conectar a comunidade aos orfanatos da região.
+### Happy é o nome da aplicação desenvolvida e ela foi pensada para conectar a comunidade aos orfanatos da região.
 
