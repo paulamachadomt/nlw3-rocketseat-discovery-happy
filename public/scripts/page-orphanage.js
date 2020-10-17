@@ -9,7 +9,7 @@ const options = {
 
 
 // create map
-const map = L.map('mapid', options).setView([-27.5870734, -48.7273812], 10.5);
+const map = L.map('mapid', options).setView([-27.5870734, -48.7273812], 10);
 
 // create and add tileLayer
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
