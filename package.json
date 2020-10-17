@@ -1,0 +1,24 @@
+{
+  "name": "nlw3-rocketseat-discovery-happy",
+  "version": "1.0.0",
+  "description": "<img src=\"./public/landing-page-happy.png\" alt=\"Happy\" width=\"800\" />",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulamachadomt/nlw3-rocketseat-discovery-happy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paulamachadomt/nlw3-rocketseat-discovery-happy/issues"
+  },
+  "homepage": "https://github.com/paulamachadomt/nlw3-rocketseat-discovery-happy#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.5"
+  }
+}
