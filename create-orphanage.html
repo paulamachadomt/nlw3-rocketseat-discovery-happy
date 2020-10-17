@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="./public/css/sidebar.css" />
     <link rel="stylesheet" href="./public/css/map.css" />
     <link rel="stylesheet" href="./public/css/forms.css" />
+    <link rel="stylesheet" href="./public/css/buttons.css" />
     <link rel="stylesheet" href="./public/css/page-create-orphanage.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
@@ -36,7 +37,6 @@
     <div id="page-create-orphanage">
       <aside class="animate-right sidebar">
         <img src="./public/images/map-marker.svg" alt="Happy" />
-
         <footer>
           <button onclick="history.back()">
             <img src="./public/images/arrow-back.svg" alt="Voltar" />
@@ -51,11 +51,11 @@
 
             <div class="map-container">
               <div id="mapid"></div>
+              <input type="hidden" name="lat" />
+              <input type="hidden" name="lng" />
 
               <footer>
-                <a href="#" id="select-point">
-                  Clique no mapa para adicionar a localização.
-                </a>
+                <a href="#" id="select-point"> Clique para adicionar uma localização </a>
               </footer>
             </div>
 
@@ -79,19 +79,22 @@
             <div class="input-block images">
               <label for="images">Foto</label>
               <div class="images-upload" id="images">
-                
                 <div class="new-upload">
-                  <input name="images" placeholder="Cole o link da foto aqui" required/>
-                  <span><img src="./public/images/remove-file.svg" alt="Remover foto"></span>
+                  <input
+                    name="images"
+                    placeholder="Cole o link da foto aqui"
+                    required
+                  />
+                  <span onclick="deleteField(event)">
+                    <img
+                      src="./public/images/remove-file.svg"
+                      alt="Remover foto"
+                    />
+                  </span>
                 </div>
-
-                
-                
               </div>
 
-
-
-              <button type="button">
+              <button onclick="addPhotoField()" type="button">
                 <img src="./public/images/add-file.svg" alt="Nova imagem" />
               </button>
             </div>
@@ -102,7 +105,11 @@
 
             <div class="input-block">
               <label for="instructions">Instruções</label>
-              <textarea id="instructions" name="instructions" required></textarea>
+              <textarea
+                id="instructions"
+                name="instructions"
+                required
+              ></textarea>
             </div>
 
             <div class="input-block">
@@ -111,25 +118,41 @@
             </div>
 
             <div class="input-block">
-              <label for="open-on-weekends"
-                >Recebe visitas aos fins de semana?</label
-              >
+              <label for="open-on-weekends">
+                Recebe visitas aos fins de semana?
+              </label>
               <input
                 type="hidden"
                 name="open-on-weekends"
                 id="open-on-weekends"
-                value="1" required
+                value="1"
+                required
               />
 
               <div class="button-select">
-                <button type="button" class="active">Sim</button>
-                <button type="button">Não</button>
+                <button
+                  data-value="1"
+                  onclick="toggleSelect(event)"
+                  type="button"
+                  class="active"
+                >
+                  Sim
+                </button>
+
+                <button
+                  data-value="0"
+                  onclick="toggleSelect(event)"
+                  type="button"
+                >
+                  Não
+                </button>
               </div>
 
-              <button type="submit" class="primary-button">
+              <button 
+                type="submit" 
+                class="primary-button">
                 Confirmar
               </button>
-
             </div>
           </fieldset>
         </form>
