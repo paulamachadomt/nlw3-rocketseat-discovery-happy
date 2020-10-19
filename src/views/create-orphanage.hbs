@@ -45,7 +45,7 @@
       </aside>
 
       <main class="animate-appear with-sidebar">
-        <form action="">
+        <form action="save-orphanage" method="POST" onsubmit="validate(event)">
           <fieldset>
             <legend>Dados</legend>
 
@@ -84,6 +84,7 @@
                     name="images"
                     placeholder="Cole o link da foto aqui"
                     required
+                    type="url"
                   />
                   <span onclick="deleteField(event)">
                     <img
@@ -113,8 +114,8 @@
             </div>
 
             <div class="input-block">
-              <label for="open-hours">Horário das visitas</label>
-              <input id="open-hours" name="open-hours" required />
+              <label for="hour">Horário das visitas</label>
+              <input id="hour" name="hour" required />
             </div>
 
             <div class="input-block">

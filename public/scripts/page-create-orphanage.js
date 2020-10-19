@@ -86,3 +86,13 @@ function toggleSelect(event) {
 
   input.value = button.dataset.value
 }
+
+function validate(event) {
+  //validar se lat e len estão preenchidos (localização no mapa)
+  const needsLatAndLng = true;
+  if(needsLatAndLng) {
+    //event.preventDefault() //impede que o usuário dê submit no form
+    alert('Selecione uma localização no mapa!')
+  }
+  
+}
